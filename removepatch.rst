@@ -22,7 +22,7 @@ When you apply an update that is meant for a different version of XenServer you 
 
 Remove the pending update
 
- Removing the update is actually quite simple using the command line on any XenServer node within the pool.
+Removing the update is actually quite simple using the command line on any XenServer node within the pool.
 
  First you need to identify the UUID of the patch, if you uploaded it recently and still have the UUID you can use that, otherwise run the ‘xe patch-list’ command which will output all patches. You can grep for the patch using -B1 which will display the UUID.
 
