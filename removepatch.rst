@@ -5,13 +5,19 @@ How to remove pending updates in Citrix XenServer
 
 When you apply an update that is meant for a different version of XenServer you should receive a warning similar to the one below.
 
-[root@xenserver ~]# xe patch-upload file-name=XS62ESP1027.xsupdate
-06b86256-274d-444e-aa08-a635717e68d1
-[root@xenserver ~]# xe patch-pool-apply uuid=06b86256-274d-444e-aa08-a635717e68d1
-The patch precheck stage failed: the server is of an incorrect version.
-patch: 06b86256-274d-444e-aa08-a635717e68d1 (XS62ESP1027)
-found_version: 6.5.0
-required_version: ^6\.2\.0$
+::
+
+   [root@xenserver ~]# xe patch-upload file-name=XS62ESP1027.xsupdate
+   06b86256-274d-444e-aa08-a635717e68d1
+
+
+::
+ 
+   [root@xenserver ~]# xe patch-pool-apply uuid=06b86256-274d-444e-aa08-a635717e68d1
+   The patch precheck stage failed: the server is of an incorrect version.
+   patch: 06b86256-274d-444e-aa08-a635717e68d1 (XS62ESP1027)
+   found_version: 6.5.0
+   required_version: ^6\.2\.0$
 
 
 Remove the pending update
